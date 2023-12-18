@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color:yellowgreen;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    background-color: darkgreen;
+    border: 2px solid greenyellow;
+    box-shadow:5px 20px 30px;
+    height:60px;
+    font-size: clamp(1.0625rem, Infinityrem + -Infinityvw, 0.3125rem);
+}
+.title{
+    background-color:white;
+    color:black;
+    text-align:center;
+    margin:100px;
+    border-radius:20px;
+    backdrop-filter: blur(15px);
+    border:2px solid black;
+    opacity:0.7;
+    font-size: clamp(1.0625rem, Infinityrem + -Infinityvw, 0.3125rem);
+}
+.ar{
+    max-height:1500px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border:1px solid black;
+    border-top:1px solid white ;
+    border-left:1px solid white;
+    padding:25px;
+    margin:50px;
+    text-align: center;
+    box-shadow:5px 20px 30px;
+}
+.ar:hover{
+    background:white;
+}
+.cn{
+    display: flex;
+    justify-content:center;
+    max-width:11816px;
+    max-height:1500px;
+}
+.a1{
+    text-decoration:none;
+    margin: 10px;
+    padding:2px;
+    color:white;
+}
+.a1:hover{
+    background-color: yellowgreen;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: black;
+}
+
+.inbox {
+    position:relative;
+    top:150px;
+    padding-right:250px;
+    
+}
+.inbox img{
+    width:300px;
+}
+h2{
+    color:greenyellow;
+}
+.container {
+    max-width: 1100px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 150px;
+    padding:130px;
+}
+.container .card {
+    max-width: 300px;
+    height: 215px;
+    background-color:green;
+    border: 5px solid greenyellow;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0,0,0,0,5);
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover {
+    height: 420px;
+}
+.container .card .imgBx {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -50px;
+    left: 30px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0,5);
+}
+.container .card .imgBx img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+.container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color:white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -80px;
+    transition-delay: 0.3s;
+}
+.content{
+    font-size: clamp(0.75rem, -1.1458rem + 233.3333vw, 0.3125rem);
+}
+.fot img{
+    max-width:1000px;
+    padding-bottom:50px;
+}
+.fo2 {
+    background-color:green;
+    left:0;
+    width:100%;
+    bottom:0;
+    position: fixed;
+    text-align: center;
+    border:2px solid white;
+}
+.fo2p img {
+    width:30px;
+}
+.fo2 p {
+    color:white;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .head,nav{
+        flex-direction:column;
+        margin:20px;
+        text-align: center;
+    }
+    .cn .logo{
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+    }
+    .ar{
+        font-size:10px;
+    }
+    .cn .ar{
+        height:10rem;
+    }
+    .container .card {
+        max-width: 200px;
+        margin-top:30px;
+        
+    }
+    .container .card .imgBx img {
+        max-width:160px;
+        padding-right:26px;
+    }
+    .container .card .imgBx{
+        position: relative;
+    }
+    .container .card:hover .content{
+        margin-top: -150px;
+    }
+    .fot img{
+        max-width:900px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .ar{
+        font-size:8px;
+        width: fit-content;
+    }
+    .container .card .imgBx{
+        position: relative;
+    }
+    .container .card {
+        max-width: 190px;
+        margin-top:-20px;
+    }
+    .container .card .imgBx img {
+        max-width:160px;
+        padding-right:2px;
+    }
+    .container .card:hover .content{
+        margin-top: -120px;
+    }
+    .fot img{
+        max-width:500px;
+    }
+}
+@media screen and (max-width: 790px){
+    .container .card {
+        max-width: 180px;
+        margin-top:-20px;
+    }
+    .container .card .imgBx img {
+        max-width:140px;
+        padding-right:-15px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .ar{
+        font-size:5px;
+    }
+    .title{
+        font-size:10px;
+    }
+    .container .card {
+        margin-top:-70px;
+    }
+    .container .card {
+        max-width: 300px;
+        margin-top:-100px;
+    }
+    .container .card .imgBx img {
+        max-width:200px;
+        padding-right:23px;
+    }
+    .title{
+        font-size:10px;
+        margin:100px;
+    }
+    .fot img{
+        max-width:200px;
+    }      
+    
+}
